@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/public/Images/shopping-cart.png" rel="icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- botstrap CDN -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="/public/CSS/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/CSS/style.css">
+    <!--<link rel="stylesheet" href="./CSS/login.css">
+    <link rel="stylesheet" href="./CSS/sells.css">
+    <link rel="stylesheet" href="./CSS/procurement.css">
+    <link rel="stylesheet" href="./CSS/credit.css">
+    <link rel="stylesheet" href="./CSS/signup.css">-->
+   
+
+</head>
+<body onload="secondFocus()">
+    <!-- nav bar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#"><img src="/public/Images/shopping-cart.png"alt="logo"></a>
+            <h3><a href="#">Karibu Groceries Limited</a></h3>
+        </div>
+        <div class="nav">
+            <a href="credit.html">Credit</a>
+            <a href="">Logout</a>
+            <!--<div id="indicator"></div>-->
+        </div>
+     
+    </div>
+    <!-- nav  bar end -->
+    
+<!-- <div class="row gy-3">
+    <div class="col-md-6 col-12  col1">
+  
+    </div>
+    <div class="col-md-6 col-12  col1">
+  
+    </div>
+  </div> -->
+
+ <form action="" name="salesform">
+    
+    <div class="title">
+        <h4>Sales Records</h4>
+        <p>"Please fill in the correct sales Records"</p>
+    </div>
+    <!-- bootstrap grid -->
+   <div class="center">
+    <!-- row1 -->
+    <div class="row sellRow">
+        <div class="col-md-6 col-12  col1">
+            <div class="inputbox">
+                <input type="text" name="nameofProduce" required="required" onblur="valnameofProduce(this, info1)">
+                <span>Name of Produce</span>
+            </div>
+            <span id="info1"></span>
+        </div>
+        <div class="col-md-6 col-12  col1">
+            <div class="inputbox">
+                <input type="number" name="tonnage" required="required" onblur="valTonnage(this, info2)">
+                <span>Tonnage (Kgs)</span>
+            </div>
+            <span id="info2"></span>
+        </div>
+     </div>
+     <!-- row 2 -->
+     <div class="row sellRow">
+        <div class="col-md-6 col-12  col1">
+            <div class="inputbox">
+                <input type="number" name="amount" required="required" onblur="valamount(this,info3)">
+                <span>Amount Paid</span>
+            </div>
+            <span id="info3"></span>
+        </div>
+        <div class="col-md-6 col-12  col1">
+            <div class="inputbox">
+                <input type="text" name="nameofBuyer" required="required" onblur="valbuyername(this,info4)">
+                <span>Name of buyer</span>
+            </div>
+            <span id="info4"></span>
+        </div>
+     </div>
+     <!-- row 3 -->
+     <div id="specialrow" class="row sellRow">
+        <p class="date">Date of transaction</p>
+        <div class="col-md-6 col-12  col1">
+           
+            <div class="inputbox">
+                
+                <input type="date" name="date" required="required">
+                <!-- <span>Date</span> -->
+            </div>
+        </div>
+        <div class="col-md-6 col-12  col1">
+            <div class="inputbox">
+                <input type="text" name="agent" required="required" onblur="valAgent(this,info5)">
+                <span>Sales Agent Name</span>
+            </div>
+            <span id="info5"></span>
+        </div>
+     </div>
+
+     <div class="inputbox">
+        <button class="loginbutton">Submit</button>
+      </div>
+
+   </div>
+    
+ </form>
+
+    
+   
+    <script src="/public/validation.js"></script>
+    <script src="/public/CSS/js/bootstrap.bundle.js"></script>
+    
+    
+</body>
+</html>
