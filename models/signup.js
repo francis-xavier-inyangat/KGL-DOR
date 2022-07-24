@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
 const signupSchema = new mongoose.Schema({
-  Username: {
+  username: {
     type: String,
   },
   email: {
@@ -15,7 +15,7 @@ const signupSchema = new mongoose.Schema({
   password: {
     type: String,
   },
-  position:{
+  selectrole:{
     type:String,
   },
   branch:{

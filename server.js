@@ -16,7 +16,7 @@ const loginRoute = require('./routes/loginRoute');
 const procurementRoute = require('./routes/procurementRoute');
 const salesRoute = require('./routes/salesRoute');
 const creditRoute = require('./routes/creditRoute');
-const signupRoute = require('./routes/salesRoute');
+const signupRoute = require('./routes/signupRoute');
 
 
 //Database
@@ -31,7 +31,7 @@ const Login = require('./models/login');
 const Procurement = require('./models/procurement');
 const Sales = require('./models/sales');
 const Credit = require('./models/credit')
-const Credit = require('./models/signup')
+const Signup = require('./models/signup')
 
 //database setup
 //setting connection
@@ -59,13 +59,13 @@ server.use(express.static(path.join(__dirname, "public")));
 server.use(expressSession);
 
 //configuring passport
-server.use(passport.initialize());
-server.use(passport.session());
+/*server.use(passport.initialize());
+server.use(passport.session());*/
 
 // Passport Local Strategy
-passport.use(login.createStrategy());
+/*passport.use(login.createStrategy());
 passport.serializeUser(login.serializeUser());
-passport.deserializeUser(login.deserializeUser());
+passport.deserializeUser(login.deserializeUser());*/
 //LoginChecker
 // const loginchecker = (req, res, next) => {
 //   if (req.path != "/login" && req.path != "/register" && !req.session.user) {
@@ -77,7 +77,7 @@ passport.deserializeUser(login.deserializeUser());
 
 
 // Setting up Routes
-server.use('/login', loginRoute);
+server.use('/', loginRoute);
 server.use('/procurement', procurementRoute);
 server.use('/sales', salesRoute);
 server.use('/credit', creditRoute);
@@ -86,7 +86,7 @@ server.use('/signup', signupRoute);
 
 // handling non existing routes
 server.get("*", (req, res) => {
-    res.status(404).send("OOPS! WRONG ADDRESS");
+    res.status(404).render("notfound");
   });
 
  

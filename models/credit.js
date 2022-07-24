@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
 const creditSchema = new mongoose.Schema({
-    nameofProduce: {
+  nameofProduce: {
     type: String,
   },
   typeofproduce: {
@@ -12,10 +12,10 @@ const creditSchema = new mongoose.Schema({
   weight:{
     type: Number,
   },
-  date: {
+  dispatchdate: {
   type: Date,
   },
-  date:{
+  duedate:{
     type:Date,
   },
   amount:{

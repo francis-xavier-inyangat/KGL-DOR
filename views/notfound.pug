@@ -11,34 +11,25 @@ head
   link(rel='stylesheet' href='/CSS/style.css')
   //
     <link rel="stylesheet" href="./CSS/login.css">
-    <link rel="stylesheet" href="/CSS/signup.css">
+    <link rel="stylesheet" href="./CSS/signup.css">
     <link rel="stylesheet" href="./CSS/sells.css">
-    <link rel="stylesheet" href="./CSS/credit.css">
     <link rel="stylesheet" href="./CSS/procurement.css">
+    <link rel="stylesheet" href="./CSS/credit.css">
 // nav bar
 .navbar
   .logo
     a(href='#')
-      img(src='/Images/shopping-cart.png' alt='logo')
+      img(src='/images/shopping-cart.png' alt='logo')
     h3
       a(href='#') Karibu Groceries Limited
+  .nav
+    a(href='/procurement') Procurement
+    a(href='/sales') Sales
+    a(href='/credit') Credit
+    a(href='/login') Login
+    a(href='/signup') Signup
+    // <div id="indicator"></div>
 // nav  bar end
-.title
-  h4 Login Page!
-  p &quot;Please enter your updated personal information.&quot;
-.center
-  h1 Login
-  form(actiion='/login' method='POST' name='loginform')
-    .inputbox
-      input#email(type='alpa-numeric' name='email' required='required' onblur='valEmail(this,info1)')
-      span Email
-    span#info1
-    .inputbox
-      input(type='password' name='password' required='required' onblur='valPassword(this, info2)')
-      span Password
-    span#info2
-    .inputbox
-      button.loginbutton LOGIN
-      //a(href='/auth/login') 
-script(src='/validation.js')
-script(src='/CSS/js/bootstrap.bundle.js')
+
+.container 
+    h1 404 page not found!
